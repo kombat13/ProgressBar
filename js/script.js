@@ -17,6 +17,10 @@ function changebar(addprocent) {
     obj = document.getElementById("myprogressbar").style.width;
     let curprocent = 0
     curprocent = Number(obj.slice(0, obj.length - 1)) + addprocent
+    if (curprocent <= 100) {
+    } else {
+        curprocent = 100
+    }
     newprocent = curprocent + "%";
     console.log('= ' + newprocent);
     let message = `
